@@ -1,0 +1,123 @@
+/*===================================
+  TOASTS CONTAINER
+===================================*/
+.toasts-container {
+    position: fixed;
+    min-width: 250px;
+    max-width: 320px;
+    min-height: 100px;
+    pointer-events: none;
+    box-sizing: border-box;
+  }
+  
+  .toasts-container *,
+  .toasts-container *::before,
+  .toasts-container *::after {
+    box-sizing: inherit;
+  }
+  
+  /* POSITIONS
+  -------------------*/
+  .toasts-container--left-bottom {
+    top: 0;
+    left: .5em;
+    bottom: 0;
+  }
+  
+  .toasts-container--left-top {
+    left: .5em;
+    top: 1em;
+  }
+  
+  /*===================================
+    TOAST
+  ===================================*/
+  .toast {
+    opacity: 0;
+    position: absolute;
+    max-width: 310px;
+    min-height: 100px;
+    margin-bottom: 1em;
+    border-radius: 0.3em;
+    background: rgba(245,222,179,0.5);
+    color: rgb(100, 68, 7);
+    box-shadow: 0 2px 8px -2px rgba(0, 0, 0, .3);
+    pointer-events: all;
+    transition: transform .7s, opacity .6s .2s;
+  }
+  
+  /*--> FROM TOP <--*/
+  .toasts-container--from-top .toast {
+    top: 0;
+    transform: translateY(-10%);
+    transition: top .4s, transform .7s .2s, opacity .6s .2s;
+  }
+  
+  /*--> FROM BOTTOM <--*/
+  .toasts-container--from-bottom .toast {
+    bottom: 0;
+    transform: translateY(40%);
+    transition: bottom .4s, transform .7s .2s, opacity .6s .2s;
+  }
+  
+  /* TOAST VISIBLE
+  --------------------*/
+  .toast--visible {
+    opacity: .9;
+  }
+  
+  /*--> FROM BOTTOM <--*/
+  .toasts-container--from-bottom .toast--visible {
+    transform: translateY(-10%);
+  }
+  
+  /*--> FROM TOP <--*/
+  .toasts-container--from-top .toast--visible {
+    transform: translateY(30%);
+  }
+  
+  /* TOAST HIDDEN
+  --------------------*/
+  .toast--hidden {
+    opacity: 0;
+  }
+  
+  /*--> FROM BOTTOM <--*/
+  .toasts-container--from-bottom .toast--hidden {
+    transform: translateY(-40%);
+  }
+  
+  /*--> FROM TOP <--*/
+  .toasts-container--from-top .toast--hidden {
+    transform: translateY(60%);
+  }
+  
+  /* STYLES
+  -----------------*/
+  .toast--green {
+    background: rgba(189, 240, 191,0.5);
+    color: rgb(8, 90, 12);
+  }
+  
+  /*===================================
+    TOAST BODY
+  ===================================*/
+  .toast__body {
+    padding: .7em 1em .3em;
+  }
+  
+  /*===================================
+    TOAST HEADER
+  ===================================*/
+  .toast__header {
+    margin: 0 0 .5em;
+  }
+  
+  /*===================================
+    TOAST TEXT
+  ===================================*/
+  .toast__text {
+    margin: 0 0 .5em;
+    overflow-y: auto;
+  }
+  

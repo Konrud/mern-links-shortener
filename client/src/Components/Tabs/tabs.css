@@ -1,0 +1,159 @@
+/************************
+         Tabs
+************************/
+.c-tabs {
+    position: relative;
+    min-width: 500px;
+    width: 100%;
+    max-width: 950px; 
+    min-height: 500px;
+    margin: 0 auto;
+  }
+  
+  /************************
+        Tabs Item
+  ************************/
+  
+  .c-tabs__item {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgb(143, 201, 208);
+  }
+  
+  .c-tabs__item.is-active {
+    border: none;
+  }
+  
+  /************************
+        Tabs Title
+  ************************/
+  
+  .c-tabs__title {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 1em 1.7em;
+    border: none;
+    font-size: 1.17rem;
+    line-height: inherit;
+    text-align: left;
+    font-weight: bold;
+    background: rgb(218, 228, 236);
+    color: rgb(123, 151, 154);
+    cursor: pointer;
+    --tab-margin-left: 0;
+    transition-property: background, color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .c-tabs__title:focus {
+    outline: none;
+    background: rgba(225, 241, 255, 1);
+  }
+  
+  .c-tabs__item.is-active > .c-tabs__title {
+    background: rgb(255, 255, 255);
+    color: rgb(27, 29, 31);
+    box-shadow: 5px 0px 3px -5px rgba(0, 0, 0, .2), -5px 0px 3px -5px rgba(0, 0, 0, .2);
+  }
+
+  .c-tabs__item.is-active > .c-tabs__title:focus {
+    box-shadow: 5px 0px 3px -5px rgba(0, 0, 0, .2), -5px 0px 3px -5px rgba(0, 0, 0, .2), 2px 2px 0px rgba(118, 123, 131) inset, -2px 2px 0px rgba(118, 123, 131) inset;
+  }
+
+  .c-tabs__item:first-child.is-active > .c-tabs__title {
+    box-shadow: 5px 0px 3px -5px rgba(0, 0, 0, .2);
+  }
+
+  .c-tabs__item:first-child.is-active > .c-tabs__title:focus {
+    box-shadow: 5px 0px 3px -5px rgba(0, 0, 0, .2), 2px 2px 0px rgba(118, 123, 131) inset, -2px 2px 0px rgba(118, 123, 131) inset;
+  }
+  
+
+  
+  /************************
+        Tabs Content
+  ************************/
+  /*
+  1. For opening animation
+  */
+  .c-tabs__content { 
+    max-height: 0px; /*[1]*/
+    padding-top: 0;
+    visibility: hidden;
+    transition: max-height .2s linear, visibility .1s linear;
+  }
+  
+  .c-tabs__item.is-active > .c-tabs__content {
+    /*max-height: 31.25rem;*/ /*~500px*/ /*we also can set it to 100vh so it will get as much height as content needs*/
+    max-height: 100vmax;  
+    padding: 1em;
+    visibility: visible;
+    transition-delay: 0s, .01s;
+  }
+
+  .c-tabs__item.is-active > .c-tabs__title:focus + .c-tabs__content,
+  .c-tabs__item.is-active > .c-tabs__title:focus-within + .c-tabs__content {
+    box-shadow: 2px 0px 0px 0px rgba(0, 0, 0, .5) inset, -2px 0px 0px 0px rgba(0, 0, 0, .5) inset;
+  }
+  
+  
+  
+  /************************
+      @Media Queries
+  ************************/
+  
+  @media screen and (min-width: 750px) {
+    /************************
+            Tabs
+    ************************/
+    .c-tabs {
+      padding: 1.5em 2em;
+    }
+  
+    /************************
+          Tabs Item
+    ************************/
+    .c-tabs__item {
+      position: absolute;
+      left: 0; bottom: 0;
+      /* height: calc(100% - 85px); */
+      height: 100%;
+      margin: 0;
+      border: none;
+      border-radius: 0 0.2rem 0.2rem 0.2rem;
+    }
+  
+    .c-tabs__item.is-active {
+      z-index: 5;
+    }
+  
+    /************************
+          Tabs Title
+    ************************/
+    .c-tabs__title {
+      position: absolute;
+      width: initial;
+      border-radius: 0.3rem 0.3rem 0 0;
+      /* transform: translateX(calc(var(--tab-margin-left) * 1px)) translateY(-100%); */
+      transform: translateY(-100%);
+      margin-left: calc(var(--tab-margin-left, 0) * 1rem);
+    }
+    
+    /************************
+          Tabs Content
+    ************************/
+    .c-tabs__content { 
+      height: 100%;
+      padding: 1em;
+      transition: none;
+    }
+
+    .c-tabs__item.is-active > .c-tabs__title:focus + .c-tabs__content,
+    .c-tabs__item.is-active > .c-tabs__title:focus-within + .c-tabs__content {
+      box-shadow: none;
+    }
+    
+  }

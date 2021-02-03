@@ -1,0 +1,36 @@
+.c-link-card {
+
+}
+
+.c-link-card__data-list {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    width: 40vw;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0.5rem;
+    border-radius: 0.11rem;
+    box-shadow: 0px 2px 5px 0px rgb(30 30 30 / 11%);
+}
+
+.c-link-card__field {
+
+}
+
+.c-link-card__title {
+
+}
+
+.c-link-card__data {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.c-link-card__data A {
+    color: rgb(56, 143, 218);
+}
+
+.c-link-card__data TIME {
+    font-style: italic;
+}

@@ -1,0 +1,8 @@
+{
+    "port": 5050,
+    "DB_URL": "mongodb+srv://konrud:konrud1985@cluster0.80ajs.mongodb.net/urlshortener?retryWrites=true&w=majority",
+    "DB_USERNAME": "konrud",
+    "DB_PASSWORD": "konrud1985",
+    "JWT_SECRET_KEY": "tiger5891",
+    "BASE_URL": "http://localhost:5050"
+}

@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+HTML {
+    height: 100%;
+    /*using system font-stack*/
+    font-family: "Roboto-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; 
+    font-size: calc(16px + (20 - 16) * (100vw - 300px) / (1100 - 300) );
+    line-height: 1.5;
+    box-sizing: border-box;
+  }
+  
+  BODY {
+    height: 100%;  
+    margin: 0;
+    color: rgb(37, 38, 39);
+    background-color: rgb(247, 247, 247);
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+    color: inherit;
+  }
+
+  MAIN {
+    height: 100%;
+  }
+
+  FIELDSET {
+    border: none;
+    padding: 0;
+  }
+
+  H1, H2, H3, H4, H5, H6 {
+    margin: 0;
+  }
+
+  UL, OL {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  A {
+    text-decoration: none;
+  }
+
+  /*Actual Style*/
+  .c-navbar {
+    display: flex;
+    color:rgb(245, 245, 245);
+    background: rgb(206, 121, 121);
+  }
+
+  .c-page-logo {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    clip-path: polygon(0% 0%, 100% 20%, 100% 80%, 0% 100%);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .25) inset;
+    background: rgb(148, 92, 92);
+  }
+
+  .c-menu {
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+  }
+
+  .c-menu__item {
+    padding: 1rem;
+  }
+
+  .c-menu__item:not(:last-child) {
+    margin-right: 0.2rem;
+  }
+
+  
+  .c-menu__item:hover {
+    color: rgb(252 252 252);
+    background: rgb(206 153 153);
+  }
+  
+  .c-menu__item:active {
+    background:rgb(156, 95, 95);
+  }
+  
+  .c-menu__item > A {
+    display: flex;
+    padding: 0.23rem 1.5rem;
+  }
+
+
+
+  

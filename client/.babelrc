@@ -1,0 +1,38 @@
+{
+    "presets": [
+        [
+            //https://babeljs.io/docs/en/babel-preset-env 
+            //https://github.com/babel/babel/issues/8829 (do not transpile JS for the listed browsers)
+            //https://github.com/browserslist/browserslist 
+            //     "@babel/preset-env",
+            //     {
+            //         // https://web.dev/serve-modern-code-to-modern-browsers/#enable-modern-bugfixes
+            //         "bugfixes": true,
+            //         // displays the list of browsers that will be pollyfilled 
+            //         // https://blog.jakoblind.no/babel-preset-env-custom-browserlistrc/
+            //         // https://web.dev/codelab-serve-modern-code/
+            //         "debug": true,
+            //         "targets": {
+            //             // "last 2 chrome versions" -> for debuging, prevents babel from transpiling JS to ES5
+            //             "browsers": [
+            //                 "last 2 chrome versions"
+            //                 //"> 0.25%, not dead"
+            //             ]
+            //         },
+            //         // https://babeljs.io/docs/en/babel-preset-env#usebuiltins-usage (Adds specific imports for polyfills when they are used in each file.)
+            //         "useBuiltIns": "usage",
+            //         // https://github.com/zloirock/core-js/blob/master/docs/2019-03-19-core-js-3-babel-and-a-look-into-the-future.md#usebuiltins-usage-with-corejs-3
+            //         "corejs": {
+            //             "version": "3.8.2",
+            //             "proposals": true
+            //         }
+            //     }
+            // ],
+            // [
+            "@babel/preset-react",
+            {
+                "useBuiltIns": true
+            }
+        ]
+    ]
+}

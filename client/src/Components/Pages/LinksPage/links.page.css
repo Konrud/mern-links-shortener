@@ -1,0 +1,42 @@
+.c-links {
+    padding: 0 0 5rem;
+}
+
+.c-links__list {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+}
+
+.c-links__list-item {
+    box-shadow: 0px 2px 5px 0px rgb(0 0 0 / 11%);
+    border-radius: 0.12rem;
+}
+
+
+.c-links__data-list {
+    margin-bottom: 0;
+}
+
+.c-links__field {
+
+}
+
+.c-links__title,
+.c-links__data {
+    display: inline-block;
+}
+
+.c-links__title {
+    font-weight: 600;
+}
+
+.c-links__data {
+margin-left: 0.3rem;
+}
+
+.c-links__data A {
+    color: cornflowerblue;
+    font-style: oblique;
+}

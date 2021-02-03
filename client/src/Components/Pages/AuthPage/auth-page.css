@@ -1,0 +1,15 @@
+.c-authentication {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.c-authentication__title {
+    margin: 2rem 0 6rem;
+    text-align: center;
+}
+
+.c-authentication__tabs {
+    width: 500px;
+    height: 505px;
+}
